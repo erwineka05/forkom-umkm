@@ -84,17 +84,7 @@ export default async function DetailProduk({ params }: { params: Promise<{ id: s
               </div>
 
               {/* Fitur / Menu */}
-              <div className="mb-8">
-                <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Varian / Fasilitas</h3>
-                <div className="flex flex-wrap gap-2">
-                  {/* UPDATE PAKSA: FIX TYPESCRIPT */}
-                  {produk.menu_atau_fasilitas.map((item: any, index: number) => (
-                    <span key={index} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg text-sm border border-gray-200">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              
 
               {/* Tombol Aksi */}
               <div className="flex flex-col gap-4 mt-auto">
