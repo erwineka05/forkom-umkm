@@ -4,10 +4,10 @@ import Image from 'next/image';
 
 export default function HalamanWisata() {
   return (
-    <div className="container mx-auto px-6 py-12">
+    <div className="container mx-auto px-6 py-12 bg-white">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-white-900 mb-4">Destinasi Eduwisata</h1>
-        <p className="text-white-500">Nikmati keindahan alam dan kearifan lokal Umbulmartani</p>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Destinasi Eduwisata</h1>
+        <p className="text-gray-500">Nikmati keindahan alam dan kearifan lokal Umbulmartani</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

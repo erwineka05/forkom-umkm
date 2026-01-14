@@ -17,7 +17,7 @@ export default async function DetailBerita({ params }: { params: Promise<{ id: s
   }
 
   return (
-    <div className="container mx-auto px-6 py-12 max-w-4xl">
+    <div className="container mx-auto px-6 py-12 max-w-4xl bg-white">
       <Link href="/berita" className="text-gray-500 hover:text-red-600 mb-6 inline-block font-medium">
         ← Kembali ke Daftar Berita
       </Link>
