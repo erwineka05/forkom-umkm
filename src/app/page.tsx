@@ -163,7 +163,7 @@ export default function Home() {
         <section className="py-24 bg-white"> 
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">
-                    <span className="md:text-4xl text-black-600 font-bold tracking-wider uppercase text-sm">Destinasi</span>
+                    <span className="text-2xl md:text-4xl text-gray-900 font-bold tracking-wider uppercase">Destinasi</span>
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Jelajahi Pesona <span className="text-red-600">Umbulmartani</span></h2>
                     <p className="text-gray-500">Nikmati pengalaman eduwisata yang memadukan keindahan alam dan kearifan lokal.</p>
                 </div>
