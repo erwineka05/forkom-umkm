@@ -85,7 +85,8 @@ export default async function DetailProduk({ params }: { params: Promise<{ id: s
               <div className="mb-8">
                 <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">Varian / Fasilitas</h3>
                 <div className="flex flex-wrap gap-2">
-                  {produk.menu_atau_fasilitas.map((item, index) => (
+                  {/* PERBAIKAN DISINI: Menambahkan tipe data ': string' dan ': number' */}
+                  {produk.menu_atau_fasilitas.map((item: string, index: number) => (
                     <span key={index} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg text-sm border border-gray-200">
                       {item}
                     </span>
