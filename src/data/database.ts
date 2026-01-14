@@ -1,5 +1,4 @@
-// src/data/database.ts
-import { UmkmItem, PengurusItem } from "@/types";
+import { UmkmItem, WisataItem, BeritaItem, PengurusItem } from "@/types";
 
 // --- DATA KULINER (Makanan & Minuman) ---
 export const dataKuliner: UmkmItem[] = [
@@ -11,7 +10,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Original"],
     harga_atau_htm: "Rp 5.000 / botol",
-    alamat: "Umbulmartani",
     kontak: "6289633462855", 
     foto: "/images/produk/lemon-sereh.jpg", 
     map_url: "https://maps.google.com"
@@ -23,7 +21,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Cup Twinwall", "Bungkus Daun"],
     harga_atau_htm: "Rp 7.000 (Cup) - Rp 1.500 (Daun)",
-    alamat: "Umbulmartani",
     kontak: "6289633462855",
     foto: "/images/produk/tape-ketan.jpg",
     map_url: "https://maps.google.com"
@@ -35,7 +32,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Slice Segitiga"],
     harga_atau_htm: "Rp 10.000 / slice",
-    alamat: "Umbulmartani",
     kontak: "6289633462855",
     foto: "/images/produk/brownies-redvelvet.jpg",
     map_url: "https://maps.google.com"
@@ -47,7 +43,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Ukuran 10x10"],
     harga_atau_htm: "Rp 15.000",
-    alamat: "Umbulmartani",
     kontak: "6289633462855",
     foto: "/images/produk/brownies-panggang.jpg",
     map_url: "https://maps.google.com"
@@ -59,7 +54,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Risoles Ayam"],
     harga_atau_htm: "Rp 5.000",
-    alamat: "Umbulmartani",
     kontak: "6289633462855",
     foto: "/images/produk/risol.jpg",
     map_url: "https://maps.google.com"
@@ -73,7 +67,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Puding Potong"],
     harga_atau_htm: "Rp 2.500",
-    alamat: "Umbulmartani",
     kontak: "6285838056235",
     foto: "/images/produk/puding-semangka.jpg",
     map_url: "https://maps.google.com"
@@ -85,7 +78,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Kue Lumpur"],
     harga_atau_htm: "Rp 2.500",
-    alamat: "Umbulmartani",
     kontak: "6285838056235",
     foto: "/images/produk/kue-lumpur.jpg",
     map_url: "https://maps.google.com"
@@ -97,7 +89,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Lenjer", "Kapal Selam", "Adaan", "Kulit"],
     harga_atau_htm: "Rp 3.500",
-    alamat: "Umbulmartani",
     kontak: "6285838056235",
     foto: "/images/produk/pempek.jpg",
     map_url: "https://maps.google.com"
@@ -109,7 +100,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Tekwan Komplit"],
     harga_atau_htm: "Rp 15.000",
-    alamat: "Umbulmartani",
     kontak: "6285838056235",
     foto: "/images/produk/tekwan.png",
     map_url: "https://maps.google.com"
@@ -123,7 +113,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Lupis"],
     harga_atau_htm: "Rp 5.000 - Rp 10.000",
-    alamat: "Umbulmartani",
     kontak: "6287873442244",
     foto: "/images/produk/lupis.jpg",
     map_url: "https://maps.google.com"
@@ -135,7 +124,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Ketan Serundeng"],
     harga_atau_htm: "Rp 5.000 - Rp 10.000",
-    alamat: "Umbulmartani",
     kontak: "6287873442244",
     foto: "/images/produk/ketan-kuning-serundeng.jpg",
     map_url: "https://maps.google.com"
@@ -147,7 +135,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Kipo"],
     harga_atau_htm: "Rp 5.000 - Rp 10.000",
-    alamat: "Umbulmartani",
     kontak: "6287873442244",
     foto: "/images/produk/kipo.jpg",
     map_url: "https://maps.google.com"
@@ -159,7 +146,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Pack 150g"],
     harga_atau_htm: "Rp 15.000",
-    alamat: "Umbulmartani",
     kontak: "6287873442244",
     foto: "/images/produk/cangklik.jpg",
     map_url: "https://maps.google.com"
@@ -171,7 +157,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Original", "Daun Jeruk", "Pedas"],
     harga_atau_htm: "Rp 15.000",
-    alamat: "Umbulmartani",
     kontak: "6287873442244",
     foto: "/images/produk/cawang.jpg",
     map_url: "https://maps.google.com"
@@ -185,7 +170,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Sambel Cumi (15k)", "Sambel Teri (15k)", "Sambel Bawang (12k)", "Sambel Terasi (12k)"],
     harga_atau_htm: "Mulai Rp 12.000",
-    alamat: "Umbulmartani",
     kontak: "6281931793244", 
     foto: "/images/produk/sambel.png",
     map_url: "https://maps.google.com"
@@ -199,7 +183,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Telur Asin"],
     harga_atau_htm: "Hubungi Penjual",
-    alamat: "Umbulmartani",
     kontak: "6285726160000", 
     foto: "/images/produk/telur-asin-tiara.jpg",
     map_url: "https://maps.google.com"
@@ -213,7 +196,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Coklat", "Keju", "Kacang", "Matcha"],
     harga_atau_htm: "Rp 5.000",
-    alamat: "Umbulmartani",
     kontak: "6289509970891",
     foto: "/images/produk/donut.jpg",
     map_url: "https://maps.google.com"
@@ -225,7 +207,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Roti Boy Style"],
     harga_atau_htm: "Rp 6.000",
-    alamat: "Umbulmartani",
     kontak: "6289509970891",
     foto: "/images/produk/roti-kopi.jpg",
     map_url: "https://maps.google.com"
@@ -237,7 +218,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Coklat", "Tiramisu", "Matcha", "Keju"],
     harga_atau_htm: "Rp 3.000",
-    alamat: "Umbulmartani",
     kontak: "6289509970891",
     foto: "/images/produk/bomboloni.jpg",
     map_url: "https://maps.google.com"
@@ -249,7 +229,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Vanilla", "Coklat", "Matcha"],
     harga_atau_htm: "Rp 4.000",
-    alamat: "Umbulmartani",
     kontak: "6289509970891",
     foto: "/images/produk/sus.jpg",
     map_url: "https://maps.google.com"
@@ -263,7 +242,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Dawet Ireng"],
     harga_atau_htm: "Rp 5.000",
-    alamat: "Umbulmartani",
     kontak: "6289673457172",
     foto: "/images/produk/dawet.jpg",
     map_url: "https://maps.google.com"
@@ -277,7 +255,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Nasi Liwet"],
     harga_atau_htm: "Rp 12.000",
-    alamat: "Warung Pagi Sore",
     kontak: "6281229979013",
     foto: "/images/produk/nasi-liwet.jpg",
     map_url: "https://maps.google.com"
@@ -289,7 +266,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Soto Ayam"],
     harga_atau_htm: "Rp 8.000",
-    alamat: "Warung Pagi Sore",
     kontak: "6281229979013",
     foto: "/images/produk/soto.jpg",
     map_url: "https://maps.google.com"
@@ -301,7 +277,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Gorengan"],
     harga_atau_htm: "Mulai Rp 1.000",
-    alamat: "Warung Pagi Sore",
     kontak: "6281229979013",
     foto: "/images/produk/gorengan.jpg",
     map_url: "https://maps.google.com"
@@ -315,7 +290,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Jadah"],
     harga_atau_htm: "Rp 15.000",
-    alamat: "Umbulmartani",
     kontak: "6281226822494",
     foto: "/images/produk/jadah.jpg",
     map_url: "https://maps.google.com"
@@ -329,8 +303,7 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Original", "Pedas"],
     harga_atau_htm: "Hubungi Penjual",
-    alamat: "Umbulmartani",
-    kontak: "6281226822494", // Asumsi kontak sama dengan grup UMKM sekitarnya jika tidak ada
+    kontak: "6281226822494", 
     foto: "/images/produk/abon.jpg",
     map_url: "https://maps.google.com"
   },
@@ -341,7 +314,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Brambang Goreng"],
     harga_atau_htm: "Hubungi Penjual",
-    alamat: "Umbulmartani",
     kontak: "6281226822494",
     foto: "/images/produk/brambang.jpg",
     map_url: "https://maps.google.com"
@@ -353,7 +325,6 @@ export const dataKuliner: UmkmItem[] = [
     kategori: "Kuliner",
     menu_atau_fasilitas: ["Telur Asin"],
     harga_atau_htm: "Hubungi Penjual",
-    alamat: "Umbulmartani",
     kontak: "6281226822494",
     foto: "/images/produk/telur-peni.jpg",
     map_url: "https://maps.google.com"
@@ -370,37 +341,33 @@ export const dataProduk: UmkmItem[] = [
     kategori: "Produk",
     menu_atau_fasilitas: ["Jumbo (200k)", "Mini Buket", "Kawat Bulu"],
     harga_atau_htm: "Mulai Rp 200.000",
-    alamat: "Umbulmartani",
     kontak: "6281931793244",
     foto: "/images/produk/rajut.jpg",
     map_url: "https://maps.google.com"
   }
 ];
 
-// --- DATA WISATA (Dummy) ---
-export const dataWisata: UmkmItem[] = [
+// --- DATA WISATA ---
+export const dataWisata: WisataItem[] = [
   {
     id: "w-01",
     nama: "Destinasi Wisata Sumber Cuwo (Ngemplak I)",
     deskripsi: "Wisata air dan senja yang cocok untuk keluarga.",
-    kategori: "Wisata",
     menu_atau_fasilitas: ["Gazebo", "Jogging Track", "Toilet", "Warung"],
     harga_atau_htm: "Belum diketahui",
-    alamat: "Umbulmartani, Ngemplak, Sleman",
-    kontak: "628111222333",
     foto: "/images/cuwo.jpg",
     map_url: "https://maps.app.goo.gl/pbjuSpPV5JCX2k3j7"
   }
 ];
 
-// --- DATA PENGURUS (Dummy) ---
-export const pengurus: PengurusItem[] = [
-  { nama: "Bpk. Sutrisno", jabatan: "Ketua Forkom", foto: "/images/ketua.jpg" },
-  { nama: "Ibu Ani", jabatan: "Sekretaris", foto: "/images/sekretaris.jpg" },
+// --- DATA PENGURUS ---
+export const dataPengurus: PengurusItem[] = [
+  { id: "pg-1", nama: "Bpk", jabatan: "Ketua Forkom", foto: "/images/ketua.jpg" },
+  { id: "pg-2", nama: "Ibu", jabatan: "Sekretaris", foto: "/images/sekretaris.jpg" },
 ];
 
-// --- DATA BERITA (Dummy) ---
-export const dataBerita = [
+// --- DATA BERITA ---
+export const dataBerita: BeritaItem[] = [
   {
     id: "b-01",
     title: "Gebyar PAUD Desa Umbulmartani Tahun 2025",

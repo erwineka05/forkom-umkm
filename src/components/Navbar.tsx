@@ -68,6 +68,9 @@ export default function Navbar() {
                   <Link href="/profil/desa" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
                     Profil Desa
                   </Link>
+                  <Link href="/profil/forkom" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
+                    Pengurus Forkom
+                  </Link>
                   <Link href="/profil/sejarah" className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600">
                     Sejarah
                   </Link>
@@ -139,6 +142,7 @@ export default function Navbar() {
               {profileOpen && (
                 <div className="pl-4 space-y-1 mt-1 border-l-2 border-gray-100 ml-4">
                    <Link href="/profil/desa" onClick={() => setSidebarOpen(false)} className="block px-4 py-2 text-sm text-gray-500 hover:text-red-600">Profil Desa</Link>
+                   <Link href="/profil/forkom" onClick={() => setSidebarOpen(false)} className="block px-4 py-2 text-sm text-gray-500 hover:text-red-600">Pengurus Forkom</Link>
                    <Link href="/profil/sejarah" onClick={() => setSidebarOpen(false)} className="block px-4 py-2 text-sm text-gray-500 hover:text-red-600">Sejarah</Link>
                 </div>
               )}
