@@ -1,35 +1,17 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-// Pastikan path import ini sesuai dengan struktur folder Anda
 import { dataProduk, dataKuliner } from '@/data/database';
 
-// --- HELPER: Format Rupiah ---
-const formatRupiah = (angka: string | number) => {
-  const rawVal = String(angka).replace(/[^0-9]/g, '');
-  const numberVal = parseInt(rawVal, 10);
-  if (isNaN(numberVal)) return angka;
-  
-  return new Intl.NumberFormat('id-ID', {
-    style: 'currency',
-    currency: 'IDR',
-    minimumFractionDigits: 0
-  }).format(numberVal);
-};
-
-// --- HALAMAN UTAMA ---
 export default async function DetailProduk({ params }: { params: Promise<{ id: string }> }) {
-  // 1. Tangkap ID dari URL (Wajib await di Next.js versi baru)
   const { id } = await params;
 
-  // 2. Gabungkan semua data agar pencarian mencakup Kuliner & Produk
-  // Menggunakan 'any' di sini agar TypeScript tidak bingung menyatukan tipe data
+  // Gabungkan semua data
   const semuaProduk: any[] = [...dataKuliner, ...dataProduk];
   
-  // 3. Cari produk berdasarkan ID
+  // Cari produk
   const produk = semuaProduk.find((item: any) => item.id === id);
 
-  // 4. Jika produk tidak ditemukan, arahkan ke halaman 404
   if (!produk) {
     return notFound();
   }
@@ -38,7 +20,7 @@ export default async function DetailProduk({ params }: { params: Promise<{ id: s
     <div className="bg-gray-50 min-h-screen py-12">
       <div className="container mx-auto px-6">
         
-        {/* --- BREADCRUMB (Navigasi Atas) --- */}
+        {/* Breadcrumb */}
         <div className="mb-8 flex items-center gap-2 text-sm text-gray-500">
           <Link href="/" className="hover:text-red-600">Beranda</Link>
           <span>/</span>
@@ -50,10 +32,10 @@ export default async function DetailProduk({ params }: { params: Promise<{ id: s
         <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
           <div className="grid md:grid-cols-2 gap-0 md:gap-12">
             
-            {/* --- KOLOM KIRI: FOTO PRODUK --- */}
+            {/* Foto Produk */}
             <div className="relative aspect-square md:aspect-auto md:h-full bg-gray-100 group min-h-[300px]">
               <Image 
-                src={produk.foto || '/images/placeholder.jpg'} // Fallback jika foto kosong
+                src={produk.foto || '/images/placeholder.jpg'} 
                 alt={produk.nama}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -62,10 +44,9 @@ export default async function DetailProduk({ params }: { params: Promise<{ id: s
               />
             </div>
 
-            {/* --- KOLOM KANAN: DETAIL INFORMASI --- */}
+            {/* Info Produk */}
             <div className="p-8 md:p-12 flex flex-col justify-center">
               
-              {/* Header Info */}
               <div className="mb-6">
                 <span className="inline-block bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
                   {produk.kategori || 'UMKM'}
@@ -73,12 +54,13 @@ export default async function DetailProduk({ params }: { params: Promise<{ id: s
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 leading-tight">
                   {produk.nama}
                 </h1>
+                
+                {/* PERBAIKAN: Langsung tampilkan string harga dari database */}
                 <p className="text-2xl font-bold text-red-600">
-                  {formatRupiah(produk.harga_atau_htm)}
+                  {produk.harga_atau_htm}
                 </p>
               </div>
 
-              {/* Deskripsi */}
               <div className="prose prose-gray mb-8">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Deskripsi</h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -86,15 +68,13 @@ export default async function DetailProduk({ params }: { params: Promise<{ id: s
                 </p>
               </div>
 
-              {/* --- BAGIAN YANG SERING ERROR (VARIAN/FASILITAS) --- */}
-              {/* Kita beri pengecekan: Jika ada datanya, baru tampilkan */}
+              {/* Varian / Fasilitas */}
               {produk.menu_atau_fasilitas && (produk.menu_atau_fasilitas as any[]).length > 0 && (
                 <div className="mb-8">
                   <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">
                     Varian / Fasilitas
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    {/* --- PENGAMAN UTAMA: MENGGUNAKAN 'any' --- */}
                     {(produk.menu_atau_fasilitas as any[]).map((item: any, index: number) => (
                       <span key={index} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-lg text-sm border border-gray-200">
                         {item}
@@ -104,7 +84,7 @@ export default async function DetailProduk({ params }: { params: Promise<{ id: s
                 </div>
               )}
 
-              {/* Tombol Aksi (WA & Maps) */}
+              {/* Tombol Kontak */}
               <div className="flex flex-col gap-4 mt-auto">
                 <a 
                   href={`https://wa.me/${produk.kontak}?text=Halo, saya tertarik dengan *${produk.nama}*`}
