@@ -35,7 +35,7 @@ export default function Home() {
         <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <Image 
-                    src="/images/icons/umkm.jpg" 
+                    src="/images/umkm-umbulmartani.JPG" 
                     alt="Kegiatan UMKM Umbulmartani" 
                     fill
                     className="object-cover object-center scale-105 opacity-90"

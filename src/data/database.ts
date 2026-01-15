@@ -373,6 +373,6 @@ export const dataBerita: BeritaItem[] = [
     title: "Gebyar PAUD Desa Umbulmartani Tahun 2025",
     date: "13 Desember 2025",
     content: "Deskripsi disini",
-    image_url: "/images/icons/umkm.jpg"
+    image_url: "/images/umkm-umbulmartani.jpg"
   }
 ];
