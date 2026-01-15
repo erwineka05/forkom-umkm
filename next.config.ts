@@ -1,8 +1,7 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  // OPSI INI AKAN MEMAKSA BUILD TETAP JALAN MESKIPUN ADA ERROR
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   typescript: {
+    
     ignoreBuildErrors: true,
   },
   eslint: {
